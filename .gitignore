@@ -1,0 +1,49 @@
+# Repository scope: the legacy Expo application and migration notes are intentionally private.
+/mobile/
+/MIGRATION_HANDOFF.md
+/NEXT_SESSION.md
+/*.html
+/*.css
+/*.js
+/*.jsx
+/*.ts
+/*.tsx
+
+# Secrets and local environment configuration
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python / Django
+**/__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+**/venv/
+**/.venv/
+**/env/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+staticfiles/
+media/
+
+# Android / Gradle
+**/.gradle/
+**/build/
+android/local.properties
+*.apk
+*.aab
+
+# IDEs and operating systems
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp

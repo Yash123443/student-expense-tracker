@@ -1,0 +1,7 @@
+# Keep repository text files consistent across Windows, macOS, Linux, and CI.
+* text=auto eol=lf
+
+# Do not attempt line-ending conversion for binary Android assets.
+*.webp binary
+*.jar binary
+*.png binary

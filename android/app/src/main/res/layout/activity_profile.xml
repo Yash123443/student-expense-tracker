@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:fillViewport="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/profileBackButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textColor="@color/text_primary" android:textSize="30sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Personalize your SplitKaro experience" android:textColor="@color/text_secondary" android:textSize="14sp" />
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:cardBackgroundColor="@color/surface" app:cardCornerRadius="24dp" app:strokeColor="@color/outline" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:orientation="vertical" android:padding="24dp">
+                <TextView android:id="@+id/profileInitialsText" android:layout_width="76dp" android:layout_height="76dp" android:background="@drawable/bg_avatar" android:gravity="center" android:text="U" android:textColor="@color/white" android:textSize="25sp" android:textStyle="bold" />
+                <TextView android:id="@+id/profileNameText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:textColor="@color/text_primary" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:id="@+id/profileEmailText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="@color/text_secondary" />
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="22dp" android:background="@color/outline" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="PAYMENT DETAILS" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" />
+                <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Your UPI ID">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/profileUpiInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.button.MaterialButton android:id="@+id/saveProfileButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="14dp" android:text="Save Profile" />
+                <com.google.android.material.progressindicator.CircularProgressIndicator android:id="@+id/profileProgress" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginTop="12dp" android:visibility="gone" />
+                <TextView android:id="@+id/profileErrorText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:textColor="@color/error" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="APPEARANCE" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" />
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:cardBackgroundColor="@color/surface" app:cardCornerRadius="20dp" app:cardElevation="0dp" app:strokeColor="@color/outline" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="18dp">
+                <TextView android:layout_width="42dp" android:layout_height="42dp" android:background="@drawable/bg_avatar" android:gravity="center" android:text="☾" android:textColor="@color/white" android:textSize="22sp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dark mode" android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Easy on your eyes, day or night" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                </LinearLayout>
+                <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/darkModeSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" app:useMaterialThemeColors="true" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="ACCOUNT" android:textColor="@color/text_secondary" android:textSize="12sp" android:textStyle="bold" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/signOutButton" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="10dp" android:text="Sign out" android:textColor="@color/error" app:strokeColor="@color/error" />
+    </LinearLayout>
+</ScrollView>

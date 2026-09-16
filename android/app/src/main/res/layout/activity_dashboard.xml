@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView android:id="@+id/welcomeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/text_primary" android:textSize="26sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Your money, in one place" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            </LinearLayout>
+
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp">
+                <TextView android:id="@+id/avatarText" android:layout_width="52dp" android:layout_height="52dp" android:background="@drawable/bg_avatar" android:gravity="center" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" android:contentDescription="Open profile" />
+                <View android:id="@+id/profileButton" android:layout_width="match_parent" android:layout_height="match_parent" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="Open profile" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="8dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="28dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TOTAL BALANCE" android:textColor="#DDE1FF" android:textSize="12sp" android:textStyle="bold" android:letterSpacing="0.05" />
+                <TextView android:id="@+id/netBalanceText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="₹0.00" android:textColor="@color/white" android:textSize="40sp" android:textStyle="bold" />
+                <TextView android:id="@+id/balanceStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Your current overview" android:textColor="#DDE1FF" />
+                
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:background="#40FFFFFF" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You are owed" android:textColor="#DDE1FF" android:textSize="12sp"/>
+                        <TextView android:id="@+id/creditText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="₹0.00" android:textColor="#A8E6CF" android:textSize="20sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You owe" android:textColor="#DDE1FF" android:textSize="12sp"/>
+                        <TextView android:id="@+id/debtText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="₹0.00" android:textColor="#FFB3B3" android:textSize="20sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton 
+            android:id="@+id/addTransactionButton" 
+            android:layout_width="match_parent" 
+            android:layout_height="60dp" 
+            android:layout_marginTop="24dp" 
+            app:cornerRadius="16dp"
+            android:text="+  Add Transaction" 
+            android:textSize="16sp"
+            android:textStyle="bold" />
+            
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="Features" android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" />
+        
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:columnCount="2" android:useDefaultMargins="true">
+            
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/surface"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/outline">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📊" android:textSize="28sp" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/budgetButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Budget" android:textSize="15sp" android:textColor="@color/text_primary" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/surface"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/outline">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📈" android:textSize="28sp" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/insightsButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Insights" android:textSize="15sp" android:textColor="@color/text_primary" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/surface"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/outline">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔄" android:textSize="28sp" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/subscriptionsButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Subs" android:textSize="15sp" android:textColor="@color/text_primary" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/surface"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/outline">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👥" android:textSize="28sp" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/groupsButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Groups" android:textSize="15sp" android:textColor="@color/text_primary" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>
